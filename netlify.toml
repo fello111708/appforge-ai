@@ -5,11 +5,24 @@
 
 [context.production.environment]
   NODE_ENV = "production"
+  ANALYTICS_ID = "UA-XXXXX-Y"  # Replace with your Google Analytics ID
+  API_URL = "https://api.appforge.ai"  # Your API endpoint
 
 [[redirects]]
   from = "/"
   to = "/enhanced.html"
   status = 200
+
+  # Redirect HTTP to HTTPS
+  from = "/*"
+  to = "https://appforge.ai/:splat"
+  status = 301
+  force = true
+
+  # Redirect www to non-www
+  from = "https://www.appforge.ai/*"
+  to = "https://appforge.ai/:splat"
+  status = 301
 
 [headers]
   for = "/*"
@@ -18,4 +31,38 @@
       X-Content-Type-Options = "nosniff"
       Referrer-Policy = "strict-origin-when-cross-origin"
       Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-      Content-Security-Policy = "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; img-src 'self' https://images.unsplash.com https://randomuser.me;"
+      Content-Security-Policy = "default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; img-src 'self' https://images.unsplash.com https://randomuser.me data:;"
+      Cache-Control = "public, max-age=0, must-revalidate"
+
+  # Cache static assets
+  for = "/static/*"
+    [headers.values]
+      Cache-Control = "public, max-age=31536000, immutable"
+
+  # Cache images
+  for = "/images/*"
+    [headers.values]
+      Cache-Control = "public, max-age=31536000, immutable"
+
+  # Cache fonts
+  for = "/fonts/*"
+    [headers.values]
+      Cache-Control = "public, max-age=31536000, immutable"
+
+[build.environment]
+  NODE_VERSION = "18.16.0"
+
+[build.settings]
+  ignore = ["*.log", "*.tmp", "*.tmp.*"]
+
+[context.production]
+  command = ""
+  environment = { NODE_ENV = "production" }
+
+[context.deploy-preview]
+  command = ""
+  environment = { NODE_ENV = "preview" }
+
+[context.branch-deploy]
+  command = ""
+  environment = { NODE_ENV = "development" }
