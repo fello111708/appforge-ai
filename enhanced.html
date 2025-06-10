@@ -667,6 +667,161 @@
         </div>
     </section>
 
+    <!-- Build Modal -->
+    <div id="buildModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden">
+        <div class="bg-white rounded-2xl shadow-xl p-8 max-w-3xl w-full mx-4">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-900">Build Your App</h2>
+                <button onclick="document.getElementById('buildModal').style.display = 'none'; document.body.style.overflow = 'auto';" class="text-gray-400 hover:text-gray-600 transition duration-200">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+
+            <!-- Progress Indicator -->
+            <div class="mb-8">
+                <div class="flex justify-between text-sm font-medium text-gray-600">
+                    <span>1. Basic Info</span>
+                    <span>2. Technical Details</span>
+                    <span>3. Project Scope</span>
+                </div>
+                <div class="relative pt-1">
+                    <div class="flex mb-2 items-center justify-between">
+                        <div class="text-xs w-32 lg:w-20 text-gray-600">10%</div>
+                        <div class="text-xs w-32 lg:w-20 text-gray-600">50%</div>
+                        <div class="text-xs w-32 lg:w-20 text-gray-600">90%</div>
+                    </div>
+                    <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-gray-200">
+                        <div style="width:50%" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center bg-gradient-to-r from-primary to-primary-dark"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Basic Info Section -->
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Basic Information</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">App Name</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent placeholder-gray-400 transition duration-200" placeholder="Enter your app name">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Project Type</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition duration-200">
+                                <option value="mobile">Mobile App</option>
+                                <option value="game">Game</option>
+                                <option value="web">Web App</option>
+                                <option value="desktop">Desktop App</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Details Section -->
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Technical Details</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Target Platforms</label>
+                            <div class="flex flex-wrap gap-2">
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="form-checkbox text-primary">
+                                    <span class="ml-2">iOS</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="form-checkbox text-primary">
+                                    <span class="ml-2">Android</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" class="form-checkbox text-primary">
+                                    <span class="ml-2">Web</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Preferred Tech Stack</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition duration-200">
+                                <option value="react">React Native</option>
+                                <option value="flutter">Flutter</option>
+                                <option value="swift">Swift</option>
+                                <option value="kotlin">Kotlin</option>
+                                <option value="web">Web Technologies</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Scope Section -->
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Project Scope</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Estimated Budget</label>
+                            <div class="relative">
+                                <input type="number" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent placeholder-gray-400 transition duration-200" placeholder="Enter budget in USD">
+                                <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                                    <span class="text-gray-500">USD</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Timeline</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition duration-200">
+                                <option value="1">1-2 months</option>
+                                <option value="3">3-4 months</option>
+                                <option value="6">5-6 months</option>
+                                <option value="12">More than 6 months</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design Preferences -->
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-4">Design Preferences</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Design Style</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition duration-200">
+                                <option value="modern">Modern</option>
+                                <option value="minimal">Minimal</option>
+                                <option value="material">Material Design</option>
+                                <option value="ios">iOS Style</option>
+                                <option value="android">Android Style</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Color Scheme</label>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-6 h-6 rounded-full bg-primary cursor-pointer"></div>
+                                <div class="w-6 h-6 rounded-full bg-secondary cursor-pointer"></div>
+                                <div class="w-6 h-6 rounded-full bg-accent cursor-pointer"></div>
+                                <div class="w-6 h-6 rounded-full bg-success cursor-pointer"></div>
+                                <div class="w-6 h-6 rounded-full bg-warning cursor-pointer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Description -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-4">Describe Your Project</label>
+                    <textarea class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent placeholder-gray-400 transition duration-200 h-32" placeholder="Tell us more about your project... What features do you want? What's the main purpose?"></textarea>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex justify-end space-x-4">
+                    <button onclick="document.getElementById('buildModal').style.display = 'none'; document.body.style.overflow = 'auto';" class="px-6 py-3 rounded-lg text-gray-700 bg-gray-100 hover:bg-gray-200 transition duration-200">
+                        Cancel
+                    </button>
+                    <button onclick="handleBuildSubmit()" class="px-6 py-3 rounded-lg bg-gradient-to-r from-primary to-primary-dark text-white hover:opacity-90 transition duration-200">
+                        Submit Project
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Workflow Section -->
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
