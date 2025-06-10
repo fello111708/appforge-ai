@@ -1,0 +1,1237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Build mobile apps and games with AI assistance. AppForge AI helps you transform ideas into reality with intelligent development tools.">
+    <meta name="keywords" content="app development, AI assistance, mobile apps, game development, appforge">
+    <meta name="author" content="AppForge AI">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://appforge.ai/">
+    <meta property="og:title" content="AppForge AI - Build Apps with AI Assistance">
+    <meta property="og:description" content="Build mobile apps and games with AI assistance. AppForge AI helps you transform ideas into reality with intelligent development tools.">
+    <meta property="og:image" content="https://appforge.ai/images/og-image.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://appforge.ai/">
+    <meta property="twitter:title" content="AppForge AI - Build Apps with AI Assistance">
+    <meta property="twitter:description" content="Build mobile apps and games with AI assistance. AppForge AI helps you transform ideas into reality with intelligent development tools.">
+    <meta property="twitter:image" content="https://appforge.ai/images/twitter-image.png">
+    
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AppForge AI",
+        "url": "https://appforge.ai/",
+        "logo": "https://appforge.ai/images/logo.png",
+        "description": "Build mobile apps and games with AI assistance. AppForge AI helps you transform ideas into reality with intelligent development tools."
+    }
+    </script>
+    
+    <title>AppForge AI - Build Apps with AI Assistance</title>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; style-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; img-src 'self' https://images.unsplash.com https://randomuser.me;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Feature-Policy" content="geolocation 'none'; microphone 'none'; camera 'none';">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=()">
+    
+    <!-- Accessibility Meta -->
+    <meta name="theme-color" content="#6366f1">
+    <meta name="msapplication-TileColor" content="#6366f1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Performance Optimizations -->
+    <meta http-equiv="Cache-Control" content="max-age=31536000">
+    <meta http-equiv="Expires" content="Thu, 31 Dec 2099 23:59:59 GMT">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" as="style" crossorigin="anonymous">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" as="style" crossorigin="anonymous">
+    
+    <!-- Prefetch important resources -->
+    <link rel="prefetch" href="/images/og-image.png">
+    <link rel="prefetch" href="/images/twitter-image.png">
+    
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    
+    <!-- Critical CSS -->
+    <style>
+        :root {
+            --primary: #6366f1;
+            --accent: #8b5cf6;
+            --dark: #1f2937;
+        }
+        
+        /* Critical CSS for above-the-fold content */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.5;
+            color: #1f2937;
+            background-color: #ffffff;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+        }
+        
+        .hero-illustration {
+            filter: drop-shadow(0 20px 13px rgba(0, 0, 0, 0.1));
+        }
+        
+        /* Accessibility styles */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+        
+        /* Performance optimization */
+        .lazy-image {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        .lazy-image.visible {
+            opacity: 1;
+        }
+    </style>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- Load Tailwind and Font Awesome -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        dark: '#1e1b4b',
+                        accent: '#f59e0b',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'ui-sans-serif', 'system-ui'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+        }
+        
+        /* Card Animations */
+        .feature-card {
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 35px -5px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+        
+        /* Button Animations */
+        .btn-hover {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
+        
+        .btn-hover:hover::before {
+            transform: translateX(100%);
+        }
+        
+        /* Text Animations */
+        .animate-text {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
+        }
+        
+        .animate-text.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Pricing Card Animations */
+        .pricing-card {
+            transition: all 0.4s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 30px 40px -10px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Mobile Menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: white;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu.active {
+            left: 0;
+        }
+        
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+        
+        .mobile-menu-overlay.active {
+            display: block;
+        }
+        
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .nav-link:after {
+                display: none;
+            }
+            
+            .hero-illustration {
+                display: none;
+            }
+            
+            .feature-card {
+                margin-bottom: 2rem;
+            }
+            
+            .pricing-card {
+                margin-bottom: 2rem;
+            }
+            
+            .showcase-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .showcase-card {
+                margin-bottom: 2rem;
+            }
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Hero Blob Animations */
+        .hero-blob {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        
+        .blob-1 {
+            width: 200px;
+            height: 200px;
+            background: #6366f1;
+            top: -100px;
+            left: -100px;
+            animation: float 10s ease-in-out infinite;
+        }
+        
+        .blob-2 {
+            width: 150px;
+            height: 150px;
+            background: #8b5cf6;
+            bottom: -75px;
+            right: -75px;
+            animation: float 12s ease-in-out infinite;
+        }
+        
+        .blob-3 {
+            width: 180px;
+            height: 180px;
+            background: #ec4899;
+            top: -90px;
+            right: -90px;
+            animation: float 15s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div id="load-project-dropdown" class="hidden absolute left-0 right-0 top-16 bg-white shadow-lg rounded-lg p-4 z-50">
+            <h4 class="font-bold mb-3 text-dark">Your Projects</h4>
+            <div id="project-list" class="space-y-2 max-h-96 overflow-y-auto">
+                <!-- Projects will be loaded here -->
+            </div>
+            <div class="mt-3 pt-3 border-t">
+                <button onclick="exportProject()" class="text-primary text-sm hover:underline">
+                    <i class="fas fa-download mr-1"></i> Export All
+                </button>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-robot text-primary text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-dark">AppForge<span class="text-primary">AI</span></span>
+                    </div>
+                    <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                        <a href="#features" class="nav-link border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Features</a>
+                        <a href="#workflow" class="nav-link border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Workflow</a>
+                        <a href="#showcase" class="nav-link border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Showcase</a>
+                        <a href="#pricing" class="nav-link border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Pricing</a>
+                    </div>
+                </div>
+                <div class="hidden sm:ml-6 sm:flex sm:items-center">
+                    <div class="relative group mr-4">
+                        <button class="flex items-center text-gray-700 hover:text-primary">
+                            <i class="fas fa-folder-open mr-1"></i> 
+                            <span>My Projects</span>
+                        </button>
+                        <div class="hidden group-hover:block absolute right-0 mt-2 w-64 bg-white shadow-lg rounded-md p-3 z-20">
+                            <h4 class="font-medium mb-2">Recent Projects</h4>
+                            <div id="recent-projects" class="space-y-2 max-h-60 overflow-y-auto">
+                                <!-- Recent projects will be loaded here -->
+                            </div>
+                            <button onclick="document.getElementById('load-project-dropdown').classList.toggle('hidden')" 
+                                    class="w-full mt-3 text-sm text-primary hover:underline">
+                                View All Projects
+                            </button>
+                        </div>
+                    </div>
+                    <button class="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition duration-300">Get Started Free</button>
+                </div>
+                <div class="-mr-2 flex items-center sm:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                        <span class="sr-only">Open main menu</span>
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="sm:hidden hidden" id="mobile-menu">
+            <div class="pt-2 pb-3 space-y-1">
+                <a href="#features" class="bg-primary bg-opacity-10 text-primary block pl-3 pr-4 py-2 border-l-4 border-primary text-base font-medium">Features</a>
+                <a href="#workflow" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Workflow</a>
+                <a href="#showcase" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Showcase</a>
+                <a href="#pricing" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Pricing</a>
+            </div>
+            <div class="pt-4 pb-3 border-t border-gray-200">
+                <div class="flex items-center px-5 space-x-4">
+                    <button class="bg-white border border-primary text-primary px-4 py-2 rounded-md text-sm font-medium w-full hover:bg-primary hover:text-white transition duration-300">Sign In</button>
+                    <button class="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium w-full hover:bg-indigo-700 transition duration-300">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-text">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">Your AI-Powered <br><span class="text-accent">Creative Partner</span></h1>
+                    <p class="text-xl opacity-90 mb-8">Turn ideas into mobile apps and games with AI assistance at every step — from concept to global launch. The most intuitive way to build digital experiences.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <button onclick="startDemo()" class="bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition duration-300 flex items-center justify-center btn-hover">
+                            <i class="fas fa-play-circle mr-3"></i> Watch Demo
+                        </button>
+                        <button onclick="startBuilding()" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition duration-300 flex items-center justify-center btn-hover">
+                            <i class="fas fa-bolt mr-3"></i> Start Building
+                        </button>
+                    </div>
+                    <div class="mt-8 flex items-center">
+                        <div class="flex -space-x-2">
+                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white" src="https://randomuser.me/api/portraits/women/11.jpg" alt="User 1">
+                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white" src="https://randomuser.me/api/portraits/men/12.jpg" alt="User 2">
+                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white" src="https://randomuser.me/api/portraits/women/13.jpg" alt="User 3">
+                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white" src="https://randomuser.me/api/portraits/men/14.jpg" alt="User 4">
+                        </div>
+                        <p class="ml-4 text-gray-200">Join <span class="font-semibold">25,000+ creators</span> who build with AppForge</p>
+                    </div>
+                    <div class="mt-8">
+                        <div class="flex items-center space-x-4">
+                            <div class="relative">
+                                <select onchange="updatePricing()" class="bg-white text-gray-700 px-4 py-2 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary">
+                                    <option value="monthly">Monthly</option>
+                                    <option value="yearly">Yearly (20% off)</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                                    <i class="fas fa-chevron-down text-gray-400"></i>
+                                </div>
+                            </div>
+                            <button onclick="startFreeTrial()" class="bg-white text-primary px-6 py-2 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition duration-300 btn-hover">
+                                <i class="fas fa-clock mr-2"></i> Start Free Trial
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative hidden lg:block">
+                    <div class="blob-1 hero-blob"></div>
+                    <div class="blob-2 hero-blob"></div>
+                    <div class="blob-3 hero-blob"></div>
+                    <div class="relative hero-illustration floating">
+                        <img src="https://illustrations.popsy.co/amber/web-development.svg" alt="App development illustration" class="w-full h-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="relative -mt-20">
+            <div class="absolute inset-0 bg-white skew-y-3"></div>
+        </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section id="workflow" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">The <span class="text-primary">AppForge</span> Workflow</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">A seamless journey from initial concept to live operations, powered by AI at every step.</p>
+            </div>
+            <div class="relative">
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-gray-200 transform -translate-x-1/2"></div>
+                <div class="space-y-12 md:space-y-0">
+                    <!-- Interactive Workflow Step 1 -->
+                    <div class="relative md:flex justify-between items-center">
+                        <div class="md:w-5/12 mb-8 md:mb-0 text-right order-1">
+                            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-primary">
+                                <h3 class="text-xl font-bold text-dark mb-3">1. Idea Generation & Validation</h3>
+                                <p class="text-gray-600 mb-4">Use multimodal input (text, voice, sketches) to develop your core concept with AI-assisted market analysis.</p>
+                                <div class="bg-indigo-50 p-3 rounded-lg text-sm">
+                                    <p class="font-medium text-indigo-800 mb-2">Try prompts like:</p>
+                                    <ul class="space-y-1 text-indigo-700">
+                                        <li class="flex items-start">
+                                            <i class="fas fa-angle-right mt-1 mr-2 text-xs"></i>
+                                            <span>"Create a meditation app with nature sounds and progress tracking"</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <i class="fas fa-angle-right mt-1 mr-2 text-xs"></i>
+                                            <span>"Design a 2D platformer with gravity flipping mechanics"</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mt-4">
+                                    <button class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-md text-sm hover:bg-indigo-200 transition duration-300" onclick="startIdeaGeneration()">
+                                        <i class="fas fa-microphone mr-2"></i> Start Voice Input
+                                    </button>
+                                    <button class="bg-purple-100 text-purple-800 px-4 py-2 rounded-md text-sm ml-2 hover:bg-purple-200 transition duration-300" onclick="openSketchTool()">
+                                        <i class="fas fa-paint-brush mr-2"></i> Open Sketch Tool
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden md:flex justify-center items-center order-2 w-16 h-16 rounded-full bg-primary text-white text-xl font-bold mx-4 z-10">1</div>
+                        <div class="md:w-5/12 order-3"></div>
+                    </div>
+                    
+                    <!-- Interactive Workflow Step 2 -->
+                    <div class="relative md:flex justify-between items-center">
+                        <div class="md:w-5/12 order-3"></div>
+                        <div class="hidden md:flex justify-center items-center order-2 w-16 h-16 rounded-full bg-secondary text-white text-xl font-bold mx-4 z-10">2</div>
+                        <div class="md:w-5/12 mb-8 md:mb-0 order-1">
+                            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-secondary">
+                                <h3 class="text-xl font-bold text-dark mb-3">2. Feature Planning & Design</h3>
+                                <p class="text-gray-600 mb-4">AI-powered feature selection and interactive wireframe generation with real-time feedback.</p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                    <div class="bg-purple-50 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-purple-700 mb-2">Feature Analysis</h4>
+                                        <p class="text-sm text-gray-600">Market demand, user flow, and technical feasibility</p>
+                                    </div>
+                                    <div class="bg-purple-50 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-purple-700 mb-2">Interactive Wireframes</h4>
+                                        <p class="text-sm text-gray-600">Drag-and-drop components with AI suggestions</p>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <button class="bg-purple-100 text-purple-800 px-4 py-2 rounded-md text-sm hover:bg-purple-200 transition duration-300" onclick="startFeatureAnalysis()">
+                                        <i class="fas fa-chart-line mr-2"></i> Analyze Features
+                                    </button>
+                                    <button class="bg-blue-100 text-blue-800 px-4 py-2 rounded-md text-sm ml-2 hover:bg-blue-200 transition duration-300" onclick="openWireframeTool()">
+                                        <i class="fas fa-draw-polygon mr-2"></i> Create Wireframe
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Interactive Workflow Step 3 -->
+                    <div class="relative md:flex justify-between items-center">
+                        <div class="md:w-5/12 mb-8 md:mb-0 text-right order-1">
+                            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-accent">
+                                <h3 class="text-xl font-bold text-dark mb-3">3. Development & Testing</h3>
+                                <p class="text-gray-600 mb-4">AI-assisted coding with real-time error detection and automated testing across devices.</p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                    <div class="bg-yellow-50 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-yellow-700 mb-2">Code Generation</h4>
+                                        <p class="text-sm text-gray-600">Multi-language support with context-aware suggestions</p>
+                                    </div>
+                                    <div class="bg-yellow-50 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-yellow-700 mb-2">Automated Testing</h4>
+                                        <p class="text-sm text-gray-600">Cross-platform compatibility and performance tests</p>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <button class="bg-yellow-100 text-yellow-800 px-4 py-2 rounded-md text-sm hover:bg-yellow-200 transition duration-300" onclick="startCodeGeneration()">
+                                        <i class="fas fa-code mr-2"></i> Generate Code
+                                    </button>
+                                    <button class="bg-green-100 text-green-800 px-4 py-2 rounded-md text-sm ml-2 hover:bg-green-200 transition duration-300" onclick="runTests()">
+                                        <i class="fas fa-check-circle mr-2"></i> Run Tests
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hidden md:flex justify-center items-center order-2 w-16 h-16 rounded-full bg-accent text-white text-xl font-bold mx-4 z-10">3</div>
+                        <div class="md:w-5/12 order-3"></div>
+                    </div>
+                    
+                    <!-- Interactive Workflow Step 4 -->
+                    <div class="relative md:flex justify-between items-center">
+                        <div class="md:w-5/12 order-3"></div>
+                        <div class="hidden md:flex justify-center items-center order-2 w-16 h-16 rounded-full bg-green-500 text-white text-xl font-bold mx-4 z-10">4</div>
+                        <div class="md:w-5/12 mb-8 md:mb-0 order-1">
+                            <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-500">
+                                <h3 class="text-xl font-bold text-dark mb-3">4. Launch & Growth</h3>
+                                <p class="text-gray-600 mb-4">Automated store assets creation, ASO optimization, and AI-powered analytics dashboards.</p>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                    <div class="bg-green-50 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-green-700 mb-2">Store Optimization</h4>
+                                        <p class="text-sm text-gray-600">App store screenshots and descriptions</p>
+                                    </div>
+                                    <div class="bg-green-50 p-4 rounded-lg">
+                                        <h4 class="font-semibold text-green-700 mb-2">Analytics Dashboard</h4>
+                                        <p class="text-sm text-gray-600">Real-time user engagement and revenue tracking</p>
+                                    </div>
+                                </div>
+                                <div class="mt-4">
+                                    <button class="bg-green-100 text-green-800 px-4 py-2 rounded-md text-sm hover:bg-green-200 transition duration-300" onclick="optimizeStore()">
+                                        <i class="fas fa-chart-bar mr-2"></i> Optimize Store
+                                    </button>
+                                    <button class="bg-blue-100 text-blue-800 px-4 py-2 rounded-md text-sm ml-2 hover:bg-blue-200 transition duration-300" onclick="openAnalytics()">
+                                        <i class="fas fa-chart-pie mr-2"></i> View Analytics
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">What Makes AppForge AI <span class="text-primary">Unique</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">A complete suite of AI tools tailored for app and game developers, designers, and product teams.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Enhanced Feature Cards -->
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300 hover:shadow-xl">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-microphone text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Multimodal Input</h3>
+                    <p class="text-gray-600 mb-4">Transform your ideas into reality with our advanced multimodal input system.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-indigo-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-indigo-700 mb-2">Voice Input</h4>
+                            <p class="text-sm text-gray-600">"Design a social media app with photo sharing and stories feature"</p>
+                        </div>
+                        <div class="bg-indigo-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-indigo-700 mb-2">Sketch Recognition</h4>
+                            <p class="text-sm text-gray-600">Draw UI elements and get instant code generation</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <button onclick="startVoiceInput()" class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-md text-sm hover:bg-indigo-200 transition duration-300">
+                            <i class="fas fa-microphone mr-2"></i> Try Voice Input
+                        </button>
+                        <button onclick="startSketching()" class="bg-purple-100 text-purple-800 px-4 py-2 rounded-md text-sm ml-2 hover:bg-purple-200 transition duration-300">
+                            <i class="fas fa-paint-brush mr-2"></i> Try Sketching
+                        </button>
+                    </div>
+                    <ul class="space-y-2 text-gray-700 mt-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Real-time voice-to-text transcription</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>AI-powered sketch recognition</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Context-aware template suggestions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Multi-language support</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-lightbulb text-primary text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-3">Dream-to-Deploy Pipeline</h3>
+                    <p class="text-gray-600 mb-4">Transform your vision into a successful product with our streamlined development process.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                        <div class="bg-indigo-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-indigo-700 mb-2">Idea Validation</h4>
+                            <p class="text-sm text-gray-600">Market research and competitor analysis</p>
+                        </div>
+                        <div class="bg-indigo-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-indigo-700 mb-2">Prototype Generation</h4>
+                            <p class="text-sm text-gray-600">Interactive prototypes in minutes</p>
+                        </div>
+                        <div class="bg-indigo-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-indigo-700 mb-2">Launch Strategy</h4>
+                            <p class="text-sm text-gray-600">Monetization and marketing plans</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>AI-powered market analysis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Real-time wireframe generation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Automated code optimization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>One-click deployment options</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-microchip text-blue-500 text-2xl"></i>
+                    </div>
+                    <div class="flex items-center">
+                        <h3 class="text-xl font-bold text-dark mb-3 mr-2">Smart Engine Selector</h3>
+                        <div class="relative group">
+                            <i class="fas fa-info-circle text-gray-400 cursor-pointer"></i>
+                            <div class="hidden group-hover:block absolute bottom-full left-1/2 transform -translate-x-1/2 bg-white p-3 rounded shadow-lg border border-gray-200 w-64 text-sm z-10">
+                                AI recommends the perfect tech stack based on your project requirements and team skills
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">Find the perfect technology stack for your project with intelligent recommendations.</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-blue-700 mb-2">Framework Analysis</h4>
+                            <p class="text-sm text-gray-600">Compare React, Flutter, Unity, and more</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="font-semibold text-blue-700 mb-2">Performance Metrics</h4>
+                            <p class="text-sm text-gray-600">Speed, scalability, and maintenance scores</p>
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Custom tech stack recommendations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Performance benchmarking</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Team skill alignment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Integration setup guides</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Pricing Plans</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Choose the plan that fits your needs and start building today.</p>
+            </div>
+            
+            <!-- Pricing Toggle -->
+            <div class="mb-12">
+                <div class="flex items-center justify-center space-x-4">
+                    <button id="monthly" onclick="togglePricing('monthly')" class="bg-primary text-white px-6 py-2 rounded-full text-sm font-semibold active:bg-primary">
+                        Monthly
+                    </button>
+                    <button id="yearly" onclick="togglePricing('yearly')" class="bg-gray-100 text-gray-700 px-6 py-2 rounded-full text-sm font-semibold">
+                        Yearly (20% off)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Starter Plan -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-xl font-bold text-dark">Starter</h3>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full">Most Popular</span>
+                        </div>
+                        <div class="flex items-baseline mb-4">
+                            <span class="text-4xl font-bold text-dark">$29</span>
+                            <span class="text-gray-500 text-sm">/month</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">Perfect for solo developers and small teams getting started.</p>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-infinity text-blue-500"></i>
+                                </div>
+                                <span class="text-sm font-medium">Unlimited Projects</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-robot text-green-500"></i>
+                                </div>
+                                <span class="text-sm font-medium">Basic AI Assistant</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-mobile-alt text-yellow-500"></i>
+                                </div>
+                                <span class="text-sm font-medium">Mobile App Development</span>
+                            </div>
+                        </div>
+                        <button onclick="startStarterTrial()" class="w-full bg-primary text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition duration-300">
+                            <i class="fas fa-rocket mr-2"></i> Start Free Trial
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Professional Plan -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-xl font-bold text-dark">Professional</h3>
+                            <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">Recommended</span>
+                        </div>
+                        <div class="flex items-baseline mb-4">
+                            <span class="text-4xl font-bold text-dark">$99</span>
+                            <span class="text-gray-500 text-sm">/month</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">For teams building multiple apps and games.</p>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-users text-green-500"></i>
+                                </div>
+                                <span class="text-sm font-medium">5 Team Members</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-brain text-purple-500"></i>
+                                </div>
+                                <span class="text-sm font-medium">Advanced AI Features</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-gamepad text-blue-500"></i>
+                                </div>
+                                <span class="text-sm font-medium">Game Development</span>
+                            </div>
+                        </div>
+                        <button onclick="startProfessionalTrial()" class="w-full bg-green-500 text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-green-600 transition duration-300">
+                            <i class="fas fa-users mr-2"></i> Start Team Trial
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-6">
+                            <h3 class="text-xl font-bold text-dark">Enterprise</h3>
+                            <span class="bg-gray-100 text-gray-700 text-xs font-semibold px-3 py-1 rounded-full">Custom</span>
+                        </div>
+                        <div class="flex items-baseline mb-4">
+                            <span class="text-4xl font-bold text-dark">Custom</span>
+                            <span class="text-gray-500 text-sm">Pricing</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">For large organizations with complex needs.</p>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-building text-purple-500"></i>
+                                </div>
+                                <span class="text-sm font-medium">Unlimited Team Members</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-shield-alt text-indigo-500"></i>
+                                </div>
+                                <span class="text-sm font-medium">Enterprise Security</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center mr-3">
+                                    <i class="fas fa-tools text-yellow-500"></i>
+                                </div>
+                                <span class="text-sm font-medium">Custom Integrations</span>
+                            </div>
+                        </div>
+                        <button onclick="contactSales()" class="w-full bg-purple-500 text-white px-6 py-3 rounded-lg text-sm font-semibold hover:bg-purple-600 transition duration-300">
+                            <i class="fas fa-envelope mr-2"></i> Contact Sales
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing Features -->
+            <div class="mt-16">
+                <h3 class="text-2xl font-bold text-dark mb-6">What's Included</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl p-6">
+                        <h4 class="text-lg font-bold text-dark mb-4">Development Tools</h4>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>AI Code Generation</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Real-time Collaboration</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Version Control</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-6">
+                        <h4 class="text-lg font-bold text-dark mb-4">Design Features</h4>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>AI Design Assistant</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Interactive Prototyping</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Asset Management</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl p-6">
+                        <h4 class="text-lg font-bold text-dark mb-4">Support & Updates</h4>
+                        <ul class="space-y-3 text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>24/7 Support</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Regular Updates</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Priority Bug Fixes</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Workflow Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-dark text-center mb-12">Our Workflow</h2>
+            <div class="relative">
+                <div class="absolute inset-0 w-full h-full bg-gradient-to-r from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
+                    <!-- Step 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden relative group">
+                        <div class="p-6">
+                            <div class="w-14 h-14 bg-indigo-100 rounded-full flex items-center justify-center mb-6">
+                                <i class="fas fa-lightbulb text-primary text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark mb-3">Idea Generation</h3>
+                            <p class="text-gray-600">Use AI-powered prompts to brainstorm and refine your app concept.</p>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center text-white">
+                                <p class="text-lg mb-2">"Our AI prompts helped me turn a vague idea into a concrete app concept in just 30 minutes."</p>
+                                <button onclick="startIdeaGeneration()" class="bg-white text-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition duration-300">
+                                    <i class="fas fa-play mr-2"></i> Start Idea Generation
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden relative group">
+                        <div class="p-6">
+                            <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                                <i class="fas fa-paint-brush text-purple-800 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark mb-3">Design</h3>
+                            <p class="text-gray-600">Create beautiful UI/UX designs with AI-generated wireframes and style guides.</p>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center text-white">
+                                <p class="text-lg mb-2">"The AI design suggestions elevated our app's UI to a professional level."</p>
+                                <button onclick="startDesign()" class="bg-white text-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition duration-300">
+                                    <i class="fas fa-paint-brush mr-2"></i> Start Design
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden relative group">
+                        <div class="p-6">
+                            <div class="w-14 h-14 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                                <i class="fas fa-code text-green-800 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark mb-3">Development</h3>
+                            <p class="text-gray-600">Generate optimized code with AI assistance for faster development.</p>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center text-white">
+                                <p class="text-lg mb-2">"The code generation feature is like having a senior developer sitting right next to me."</p>
+                                <button onclick="startDevelopment()" class="bg-white text-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition duration-300">
+                                    <i class="fas fa-code mr-2"></i> Start Development
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden relative group">
+                        <div class="p-6">
+                            <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                                <i class="fas fa-rocket text-blue-800 text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-dark mb-3">Launch</h3>
+                            <p class="text-gray-600">Deploy your app to multiple platforms with our automated deployment tools.</p>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <div class="text-center text-white">
+                                <p class="text-lg mb-2">"The deployment process was seamless and our app is now live on all platforms."</p>
+                                <button onclick="startLaunch()" class="bg-white text-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition duration-300">
+                                    <i class="fas fa-rocket mr-2"></i> Start Launch
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-dark text-center mb-12">What We've Built</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="group relative bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:transform hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1512820790803-83ca734da596?w=800" alt="Mobile game screenshot" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Spectral Realms</h3>
+                        <p class="text-gray-600 mb-4">Adventure RPG with dynamically generated quests and AI-powered NPC dialogues.</p>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Unity</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Procedural</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span class="ml-2 text-sm">4.8</span>
+                            </div>
+                            <button onclick="tryDemo('spectral-realms')" class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition duration-300 flex items-center">
+                                <i class="fas fa-play mr-2"></i> Try Demo
+                            </button>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <h3 class="text-xl font-bold mb-2">Spectral Realms</h3>
+                            <p class="text-sm mb-4">"The procedural generation is mind-blowing! Each playthrough feels fresh and exciting."</p>
+                            <button onclick="tryDemo('spectral-realms')" class="bg-white text-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-50 transition duration-300">
+                                <i class="fas fa-play mr-2"></i> Try Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="group relative bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:transform hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800" alt="Fitness app screenshot" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">Pulse Trainer</h3>
+                        <p class="text-gray-600 mb-4">AI-powered personal trainer with real-time form correction and workout recommendations.</p>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Flutter</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">AI Vision</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="ml-2 text-sm">5.0</span>
+                            </div>
+                            <button onclick="tryDemo('pulse-trainer')" class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition duration-300 flex items-center">
+                                <i class="fas fa-play mr-2"></i> Try Demo
+                            </button>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <h3 class="text-xl font-bold mb-2">Pulse Trainer</h3>
+                            <p class="text-sm mb-4">"The AI form correction has improved my posture and prevented injuries."</p>
+                            <button onclick="tryDemo('pulse-trainer')" class="bg-white text-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-50 transition duration-300">
+                                <i class="fas fa-play mr-2"></i> Try Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="group relative bg-white rounded-xl overflow-hidden shadow-lg transition-all duration-300 hover:shadow-xl hover:transform hover:scale-105">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800" alt="Education app screenshot" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-dark mb-2">CodeMentor</h3>
+                        <p class="text-gray-600 mb-4">Interactive coding platform with AI-powered code completion and debugging assistance.</p>
+                        <div class="flex items-center space-x-2 mb-4">
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">React Native</span>
+                            <span class="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">Machine Learning</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span class="ml-2 text-sm">5.0</span>
+                            </div>
+                            <button onclick="tryDemo('codementor')" class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-700 transition duration-300 flex items-center">
+                                <i class="fas fa-play mr-2"></i> Try Demo
+                            </button>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                        <div class="text-white text-center">
+                            <h3 class="text-xl font-bold mb-2">CodeMentor</h3>
+                            <p class="text-sm mb-4">"The AI suggestions have made me a better programmer in just a few weeks."</p>
+                            <button onclick="tryDemo('codementor')" class="bg-white text-primary px-4 py-2 rounded-lg text-sm font-semibold hover:bg-indigo-50 transition duration-300">
+                                <i class="fas fa-play mr-2"></i> Try Demo
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-dark text-center mb-12">What Our Users Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-6 shadow-lg relative">
+                    <div class="absolute -top-4 -left-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                        <i class="fas fa-quote-left text-white text-xl"></i>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-gray-600 mb-4">"AppForge AI has completely transformed how I approach app development. The AI suggestions are spot-on and have saved me countless hours."</p>
+                        <div class="mt-6">
+                            <div class="flex justify-center mb-2">
+                                <img class="w-16 h-16 rounded-full ring-2 ring-primary" src="https://randomuser.me/api/portraits/women/1.jpg" alt="Sarah Johnson">
+                            </div>
+                            <h3 class="font-semibold text-dark">Sarah Johnson</h3>
+                            <p class="text-gray-500">Mobile Developer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-lg relative">
+                    <div class="absolute -top-4 -left-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                        <i class="fas fa-quote-left text-white text-xl"></i>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-gray-600 mb-4">"The AI-powered design suggestions have elevated our app's UI to a professional level. Our users love the polished look."</p>
+                        <div class="mt-6">
+                            <div class="flex justify-center mb-2">
+                                <img class="w-16 h-16 rounded-full ring-2 ring-primary" src="https://randomuser.me/api/portraits/men/2.jpg" alt="Michael Chen">
+                            </div>
+                            <h3 class="font-semibold text-dark">Michael Chen</h3>
+                            <p class="text-gray-500">Product Manager</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-lg relative">
+                    <div class="absolute -top-4 -left-4 w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                        <i class="fas fa-quote-left text-white text-xl"></i>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-gray-600 mb-4">"The code generation feature is amazing! It's like having a senior developer sitting right next to me."</p>
+                        <div class="mt-6">
+                            <div class="flex justify-center mb-2">
+                                <img class="w-16 h-16 rounded-full ring-2 ring-primary" src="https://randomuser.me/api/portraits/women/3.jpg" alt="Emma Wilson">
+                            </div>
+                            <h3 class="font-semibold text-dark">Emma Wilson</h3>
+                            <p class="text-gray-500">Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">AppForge AI</h3>
+                    <p class="text-gray-400">Transform your ideas into reality with AI-powered app and game development.</p>
+                    <div class="mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white mr-4">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white mr-4">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white mr-4">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Product</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#features" class="hover:text-white">Features</a></li>
+                        <li><a href="#workflow" class="hover:text-white">Workflow</a></li>
+                        <li><a href="#showcase" class="hover:text-white">Showcase</a></li>
+                        <li><a href="#pricing" class="hover:text-white">Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Resources</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Documentation</a></li>
+                        <li><a href="#" class="hover:text-white">API Reference</a></li>
+                        <li><a href="#" class="hover:text-white">Tutorials</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Company</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">About</a></li>
+                        <li><a href="#" class="hover:text-white">Careers</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 AppForge AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
