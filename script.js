@@ -57,17 +57,47 @@ buttons.forEach(button => {
     });
 });
 
-// Demo Button Functionality
-function startDemo() {
-    // Add demo functionality here
+// Button Click Handlers
+function handleDemoClick() {
+    const demoButton = document.querySelector('.primary-btn');
+    const ripple = document.createElement('span');
+    const rect = demoButton.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    
+    ripple.style.left = `${x}px`;
+    ripple.style.top = `${y}px`;
+    ripple.classList.add('ripple');
+    demoButton.appendChild(ripple);
+    
+    // Add demo functionality
     console.log('Starting demo...');
-    // You can add your demo logic here
+    alert('Demo functionality will be added here!');
+    
+    setTimeout(() => {
+        ripple.remove();
+    }, 1000);
 }
 
-function startBuilding() {
-    // Add building functionality here
+function handleBuildClick() {
+    const buildButton = document.querySelector('.secondary-btn');
+    const ripple = document.createElement('span');
+    const rect = buildButton.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+    
+    ripple.style.left = `${x}px`;
+    ripple.style.top = `${y}px`;
+    ripple.classList.add('ripple');
+    buildButton.appendChild(ripple);
+    
+    // Add build functionality
     console.log('Starting building process...');
-    // You can add your building logic here
+    alert('Building process will be added here!');
+    
+    setTimeout(() => {
+        ripple.remove();
+    }, 1000);
 }
 
 // Add ripple effect style
@@ -95,6 +125,52 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+// Initialize buttons
+document.addEventListener('DOMContentLoaded', () => {
+    // Add event listeners to all buttons
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            // Add click animation
+            const ripple = document.createElement('span');
+            const rect = button.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            ripple.style.left = `${x}px`;
+            ripple.style.top = `${y}px`;
+            ripple.classList.add('ripple');
+            button.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 1000);
+        });
+
+        // Add hover effects
+        button.addEventListener('mouseenter', () => {
+            button.style.transform = 'translateY(-2px)';
+            button.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+        });
+
+        button.addEventListener('mouseleave', () => {
+            button.style.transform = 'translateY(0)';
+            button.style.boxShadow = 'none';
+        });
+
+        // Add active state
+        button.addEventListener('mousedown', () => {
+            button.style.transform = 'translateY(1px)';
+            button.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+        });
+
+        button.addEventListener('mouseup', () => {
+            button.style.transform = 'translateY(-2px)';
+            button.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+        });
+    });
+});
 
 // Mobile Menu Toggle
 const mobileMenuButton = document.querySelector('.mobile-menu-button');
