@@ -1,0 +1,68 @@
+/* Base Styles */
+:root {
+    --primary: #6366f1;
+    --accent: #8b5cf6;
+    --dark: #1f2937;
+    --light: #f3f4f6;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Typography */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+}
+
+/* Buttons */
+.btn-hover {
+    transition: all 0.3s ease;
+}
+
+.btn-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Cards */
+.feature-card {
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .grid-cols-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .grid-cols-4 {
+        grid-template-columns: 1fr;
+    }
+}
