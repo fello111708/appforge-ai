@@ -84,25 +84,30 @@
                 </div>
                 <div class="hidden sm:ml-6 sm:flex sm:items-center">
                     <div class="relative group mr-4">
-                        <button class="flex items-center text-gray-700 hover:text-primary">
+                        <button id="projectsDropdown" class="flex items-center text-gray-700 hover:text-primary focus:outline-none">
                             <i class="fas fa-folder-open mr-1"></i> 
                             <span>My Projects</span>
+                            <i class="fas fa-chevron-down ml-2"></i>
                         </button>
-                        <div class="hidden group-hover:block absolute right-0 mt-2 w-64 bg-white shadow-lg rounded-md p-3 z-20">
+                        <div id="projectsDropdownMenu" class="hidden absolute right-0 mt-2 w-64 bg-white shadow-lg rounded-md p-3 z-20">
                             <h4 class="font-medium mb-2">Recent Projects</h4>
                             <div id="recent-projects" class="space-y-2 max-h-60 overflow-y-auto">
                                 <!-- Recent projects will be loaded here -->
                             </div>
-                            <button onclick="document.getElementById('load-project-dropdown').classList.toggle('hidden')" 
-                                    class="w-full mt-3 text-sm text-primary hover:underline">
+                            <button onclick="loadAllProjects()" 
+                                    class="w-full mt-3 text-sm text-primary hover:underline focus:outline-none">
                                 View All Projects
                             </button>
                         </div>
                     </div>
-                    <button class="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition duration-300">Get Started Free</button>
+                    <button class="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
+                        Get Started Free
+                    </button>
                 </div>
                 <div class="-mr-2 flex items-center sm:hidden">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary" aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+                    <button type="button" id="mobileMenuButton" 
+                            class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary"
+                            aria-controls="mobile-menu" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <i class="fas fa-bars"></i>
                     </button>
@@ -111,21 +116,60 @@
         </div>
         
         <!-- Mobile menu -->
-        <div class="sm:hidden hidden" id="mobile-menu">
+        <div class="sm:hidden" id="mobile-menu">
             <div class="pt-2 pb-3 space-y-1">
-                <a href="#features" class="bg-primary bg-opacity-10 text-primary block pl-3 pr-4 py-2 border-l-4 border-primary text-base font-medium">Features</a>
-                <a href="#workflow" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Workflow</a>
-                <a href="#showcase" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Showcase</a>
-                <a href="#pricing" class="border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700 block pl-3 pr-4 py-2 border-l-4 text-base font-medium">Pricing</a>
+                <a href="#features" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-gray-500 hover:border-primary hover:text-primary focus:outline-none focus:border-primary focus:text-primary transition duration-200">Features</a>
+                <a href="#workflow" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-gray-500 hover:border-primary hover:text-primary focus:outline-none focus:border-primary focus:text-primary transition duration-200">Workflow</a>
+                <a href="#showcase" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-gray-500 hover:border-primary hover:text-primary focus:outline-none focus:border-primary focus:text-primary transition duration-200">Showcase</a>
+                <a href="#pricing" class="block pl-3 pr-4 py-2 border-l-4 border-transparent text-gray-500 hover:border-primary hover:text-primary focus:outline-none focus:border-primary focus:text-primary transition duration-200">Pricing</a>
             </div>
             <div class="pt-4 pb-3 border-t border-gray-200">
-                <div class="flex items-center px-5 space-x-4">
-                    <button class="bg-white border border-primary text-primary px-4 py-2 rounded-md text-sm font-medium w-full hover:bg-primary hover:text-white transition duration-300">Sign In</button>
-                    <button class="bg-primary text-white px-4 py-2 rounded-md text-sm font-medium w-full hover:bg-indigo-700 transition duration-300">Get Started</button>
+                <div class="flex flex-col space-y-2 px-5">
+                    <button class="w-full bg-white border border-primary text-primary px-4 py-2 rounded-md text-sm font-medium hover:bg-primary hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition duration-300">
+                        Sign In
+                    </button>
+                    <button class="w-full bg-primary text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary transition duration-300">
+                        Get Started
+                    </button>
                 </div>
             </div>
         </div>
     </nav>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuButton').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+            this.ariaExpanded = mobileMenu.classList.contains('hidden') ? 'false' : 'true';
+        });
+
+        // Projects dropdown
+        document.getElementById('projectsDropdown').addEventListener('click', function(e) {
+            e.preventDefault();
+            const dropdownMenu = document.getElementById('projectsDropdownMenu');
+            dropdownMenu.classList.toggle('hidden');
+            this.classList.toggle('active');
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            const dropdown = document.getElementById('projectsDropdown');
+            const dropdownMenu = document.getElementById('projectsDropdownMenu');
+            if (!dropdown.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                dropdownMenu.classList.add('hidden');
+                dropdown.classList.remove('active');
+            }
+        });
+
+        // Load all projects function
+        function loadAllProjects() {
+            // Add your project loading logic here
+            console.log('Loading all projects...');
+            // Close the dropdown after loading
+            document.getElementById('projectsDropdownMenu').classList.add('hidden');
+        }
+    </script>
     
     <!-- Hero Section -->
     <section class="hero-bg" style="background-color: var(--primary); background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1551632635-5892932a5000?auto=format&fit=crop&w=1920&q=80');">
@@ -838,9 +882,58 @@
             const modal = document.getElementById('buildModal');
             modal.classList.add('hidden');
             document.body.style.overflow = 'auto';
+            // Reset form fields
+            document.querySelectorAll('input, select, textarea').forEach(field => {
+                field.value = '';
+                field.classList.remove('error');
+            });
+        }
+
+        function validateForm() {
+            const errors = [];
+            
+            // Validate required fields
+            const name = document.querySelector('input[placeholder="Enter your app name"]').value.trim();
+            if (!name) {
+                errors.push('App name is required');
+                document.querySelector('input[placeholder="Enter your app name"]').classList.add('error');
+            }
+            
+            const type = document.querySelector('select[name="projectType"]').value;
+            if (!type) {
+                errors.push('Project type is required');
+                document.querySelector('select[name="projectType"]').classList.add('error');
+            }
+            
+            const platforms = document.querySelectorAll('input[type="checkbox"]:checked').length;
+            if (platforms === 0) {
+                errors.push('At least one platform must be selected');
+                document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.classList.add('error'));
+            }
+            
+            const description = document.querySelector('textarea').value.trim();
+            if (!description) {
+                errors.push('Project description is required');
+                document.querySelector('textarea').classList.add('error');
+            }
+
+            return errors;
         }
 
         function handleBuildSubmit() {
+            // Show loading state
+            const submitBtn = document.querySelector('button[onclick="handleBuildSubmit()"]');
+            submitBtn.classList.add('loading');
+            
+            // Validate form
+            const errors = validateForm();
+            if (errors.length > 0) {
+                submitBtn.classList.remove('loading');
+                alert('Please fix the following errors:\n\n' + errors.join('\n'));
+                return;
+            }
+
+            // Collect form data
             const formData = {
                 name: document.querySelector('input[placeholder="Enter your app name"]').value,
                 type: document.querySelector('select[name="projectType"]').value,
@@ -848,14 +941,61 @@
                 techStack: document.querySelector('select[name="techStack"]').value,
                 budget: document.querySelector('input[placeholder="Enter budget in USD"]').value,
                 timeline: document.querySelector('select[name="timeline"]').value,
-                description: document.querySelector('textarea').value
+                description: document.querySelector('textarea').value,
+                timestamp: new Date().toISOString()
             };
-            
+
             console.log('Form Data:', formData);
-            alert('Thank you for submitting your project details! Our team will review them and get back to you soon.');
-            closeModal();
+            
+            // Simulate API call
+            setTimeout(() => {
+                submitBtn.classList.remove('loading');
+                alert('Thank you for submitting your project details! Our team will review them and get back to you soon.');
+                closeModal();
+            }, 1500);
         }
+
+        // Initialize form validation
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add blur event listeners for real-time validation
+            document.querySelectorAll('input, select, textarea').forEach(field => {
+                field.addEventListener('blur', () => {
+                    const errors = validateForm();
+                    if (errors.length > 0) {
+                        field.classList.add('error');
+                    } else {
+                        field.classList.remove('error');
+                    }
+                });
+            });
+        });
     </script>
+
+    <style>
+        /* Error state for form fields */
+        .error {
+            @apply border-red-500;
+        }
+
+        /* Loading state for buttons */
+        .loading {
+            @apply opacity-50 cursor-not-allowed;
+        }
+
+        /* Form validation styles */
+        .error-message {
+            @apply text-red-500 text-sm mt-1;
+        }
+
+        /* Progress bar styles */
+        .progress-bar {
+            @apply h-2 rounded-full bg-gray-200;
+        }
+
+        .progress-bar-fill {
+            @apply h-full rounded-full bg-primary transition-all duration-500;
+        }
+    </style>
 
     <style>
         .modal-overlay {
