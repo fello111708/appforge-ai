@@ -6,6 +6,61 @@
     <title>AppForge AI - Build Apps with AI Assistance</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Background image for hero section */
+        .hero-bg {
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+                       url('images/background.jpg') center/cover;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        /* Button styles */
+        .primary-btn {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .primary-btn:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .primary-btn:active {
+            transform: translateY(1px);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .secondary-btn {
+            background: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .secondary-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .secondary-btn:active {
+            transform: translateY(1px);
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
     <!-- Navigation -->
@@ -73,26 +128,18 @@
     </nav>
     
     <!-- Hero Section -->
-    <section class="gradient-bg text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-32">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="animate-text">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 hero-title">Your AI-Powered <br><span class="text-white/90">Creative Partner</span></h1>
-                    <p class="text-xl md:text-2xl text-white/90 mb-8 hero-subtitle">Transform your ideas into stunning mobile apps and games with intelligent development tools.</p>
-                    <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12 hero-buttons">
-                        <button onclick="startDemo()" class="bg-white text-primary px-8 py-4 rounded-lg text-lg font-semibold hover:bg-opacity-90 transition duration-300 flex items-center justify-center btn-hover">
-                            <i class="fas fa-play-circle mr-3"></i> Watch Demo
-                        </button>
-                        <button onclick="startBuilding()" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-primary transition duration-300 flex items-center justify-center btn-hover">
-                            <i class="fas fa-bolt mr-3"></i> Start Building
-                        </button>
-                    </div>
-                    <div class="mt-8 flex items-center">
-                        <div class="flex -space-x-2">
-                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white" src="https://randomuser.me/api/portraits/women/11.jpg" alt="User 1">
-                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white" src="https://randomuser.me/api/portraits/men/12.jpg" alt="User 2">
-                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white" src="https://randomuser.me/api/portraits/women/13.jpg" alt="User 3">
-                            <img class="inline-block h-10 w-10 rounded-full ring-2 ring-white" src="https://randomuser.me/api/portraits/men/14.jpg" alt="User 4">
+    <section class="hero-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Your AI-Powered <br><span class="text-white/90">Creative Partner</span></h1>
+                <p class="text-xl md:text-2xl text-white/90 mb-8">Transform your ideas into stunning mobile apps and games with intelligent development tools.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4 mb-12">
+                    <button onclick="startDemo()" class="primary-btn">
+                        Watch Demo
+                    </button>
+                    <button onclick="startBuilding()" class="secondary-btn">
+                        Start Building
+                    </button>
                         </div>
                         <p class="ml-4 text-gray-200">Join <span class="font-semibold">25,000+ creators</span> who build with AppForge</p>
                     </div>

@@ -17,13 +17,84 @@ navLinks.forEach(link => {
 // Button Interactions
 const buttons = document.querySelectorAll('button');
 buttons.forEach(button => {
-    button.addEventListener('click', () => {
-        button.classList.add('active');
+    // Add click animation
+    button.addEventListener('click', (e) => {
+        const ripple = document.createElement('span');
+        const rect = button.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+        ripple.classList.add('ripple');
+        button.appendChild(ripple);
+        
         setTimeout(() => {
-            button.classList.remove('active');
-        }, 300);
+            ripple.remove();
+        }, 1000);
+    });
+
+    // Add hover effects
+    button.addEventListener('mouseenter', () => {
+        button.style.transform = 'translateY(-2px)';
+        button.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+    });
+
+    button.addEventListener('mouseleave', () => {
+        button.style.transform = 'translateY(0)';
+        button.style.boxShadow = 'none';
+    });
+
+    // Add active state
+    button.addEventListener('mousedown', () => {
+        button.style.transform = 'translateY(1px)';
+        button.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+    });
+
+    button.addEventListener('mouseup', () => {
+        button.style.transform = 'translateY(-2px)';
+        button.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
     });
 });
+
+// Demo Button Functionality
+function startDemo() {
+    // Add demo functionality here
+    console.log('Starting demo...');
+    // You can add your demo logic here
+}
+
+function startBuilding() {
+    // Add building functionality here
+    console.log('Starting building process...');
+    // You can add your building logic here
+}
+
+// Add ripple effect style
+const style = document.createElement('style');
+style.textContent = `
+    .ripple {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        animation: ripple 1s ease-out;
+        pointer-events: none;
+    }
+    
+    @keyframes ripple {
+        0% {
+            transform: scale(0);
+            opacity: 1;
+        }
+        100% {
+            transform: scale(3);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
 
 // Mobile Menu Toggle
 const mobileMenuButton = document.querySelector('.mobile-menu-button');
