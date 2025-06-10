@@ -161,8 +161,14 @@
                         ripple.style.top = `${y}px`;
                         ripple.classList.add('ripple');
                         this.appendChild(ripple);
-                        console.log('Starting building process...');
-                        alert('Building process will be added here!');
+                        
+                        // Show the build modal
+                        const modal = document.getElementById('buildModal');
+                        if (modal) {
+                            modal.style.display = 'block';
+                            document.body.style.overflow = 'hidden';
+                        }
+                        
                         setTimeout(() => {
                             ripple.remove();
                         }, 1000);
