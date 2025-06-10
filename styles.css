@@ -4,6 +4,7 @@
     --accent: #8b5cf6;
     --dark: #1f2937;
     --light: #f3f4f6;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Reset */
@@ -11,6 +12,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: var(--transition);
+}
+
+*::before, *::after {
+    transition: var(--transition);
 }
 
 /* Typography */
@@ -18,33 +24,103 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--dark);
+    background-color: var(--light);
 }
 
-/* Buttons */
-.btn-hover {
-    transition: all 0.3s ease;
+/* Navigation Animations */
+nav {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
-.btn-hover:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+nav a {
+    position: relative;
+    padding: 0.5rem 1rem;
 }
 
-/* Cards */
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary);
+    transition: var(--transition);
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Button Animations */
+button {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: var(--transition);
+}
+
+button:active::before {
+    width: 200%;
+    height: 200%;
+}
+
+/* Card Animations */
 .feature-card {
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform, box-shadow;
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
 }
 
-/* Animations */
-@keyframes fadeIn {
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.feature-card:hover::before {
+    transform: translateX(100%);
+}
+
+/* Pricing Card Animations */
+.pricing-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Scroll Animations */
+@keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
@@ -52,8 +128,62 @@ body {
     }
 }
 
-.fade-in {
-    animation: fadeIn 0.5s ease-out forwards;
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: var(--transition);
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mobile Menu Animations */
+.mobile-menu {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+/* Hero Section Animations */
+.hero-title {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.hero-subtitle {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.hero-buttons {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+/* Gradient Animations */
+.gradient-bg {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 50%, #ec4899 100%);
+    background-size: 200% 200%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Responsive Design */
@@ -64,5 +194,13 @@ body {
     
     .grid-cols-4 {
         grid-template-columns: 1fr;
+    }
+    
+    .feature-card {
+        margin-bottom: 2rem;
+    }
+    
+    .pricing-card {
+        margin-bottom: 2rem;
     }
 }
