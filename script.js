@@ -58,12 +58,14 @@ buttons.forEach(button => {
 });
 
 // Button Click Handlers
-function handleDemoClick() {
-    const demoButton = document.querySelector('.primary-btn');
+function handleDemoClick(e) {
+    const demoButton = e.target.closest('.primary-btn');
+    if (!demoButton) return;
+    
     const ripple = document.createElement('span');
     const rect = demoButton.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
     
     ripple.style.left = `${x}px`;
     ripple.style.top = `${y}px`;
@@ -79,12 +81,14 @@ function handleDemoClick() {
     }, 1000);
 }
 
-function handleBuildClick() {
-    const buildButton = document.querySelector('.secondary-btn');
+function handleBuildClick(e) {
+    const buildButton = e.target.closest('.secondary-btn');
+    if (!buildButton) return;
+    
     const ripple = document.createElement('span');
     const rect = buildButton.getBoundingClientRect();
-    const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
     
     ripple.style.left = `${x}px`;
     ripple.style.top = `${y}px`;
@@ -99,6 +103,56 @@ function handleBuildClick() {
         ripple.remove();
     }, 1000);
 }
+
+// Make functions globally accessible
+window.handleDemoClick = handleDemoClick;
+window.handleBuildClick = handleBuildClick;
+
+// Initialize buttons when DOM is ready
+document.addEventListener('DOMContentLoaded', () => {
+    // Add event listeners to all buttons
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            // Add click animation
+            const ripple = document.createElement('span');
+            const rect = button.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            ripple.style.left = `${x}px`;
+            ripple.style.top = `${y}px`;
+            ripple.classList.add('ripple');
+            button.appendChild(ripple);
+            
+            setTimeout(() => {
+                ripple.remove();
+            }, 1000);
+        });
+
+        // Add hover effects
+        button.addEventListener('mouseenter', () => {
+            button.style.transform = 'translateY(-2px)';
+            button.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+        });
+
+        button.addEventListener('mouseleave', () => {
+            button.style.transform = 'translateY(0)';
+            button.style.boxShadow = 'none';
+        });
+
+        // Add active state
+        button.addEventListener('mousedown', () => {
+            button.style.transform = 'translateY(1px)';
+            button.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
+        });
+
+        button.addEventListener('mouseup', () => {
+            button.style.transform = 'translateY(-2px)';
+            button.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+        });
+    });
+});
 
 // Add ripple effect style
 const style = document.createElement('style');
